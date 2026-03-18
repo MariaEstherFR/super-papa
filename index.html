@@ -54,7 +54,25 @@ html, body { width:100%; height:100%; overflow:hidden; background:#000; font-fam
 .s1-big .g { display:block; background:linear-gradient(90deg,#e63946,#ff6b35,#ffd700); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .s1-bar { width:60px; height:3px; background:linear-gradient(90deg,#e63946,#ff6b35); border-radius:2px; margin:18px auto; }
 .s1-sub { font-size:.75rem; font-weight:700; letter-spacing:5px; color:rgba(255,255,255,.3); text-transform:uppercase; }
-.s1-hint { margin-top:44px; font-size:.6rem; font-weight:700; letter-spacing:5px; color:rgba(255,255,255,.2); text-transform:uppercase; display:flex; align-items:center; justify-content:center; gap:8px; }
+.s1-name {
+  margin-top:32px;
+  font-family:'Bebas Neue',cursive;
+  font-size:clamp(1.4rem,5vw,2.8rem);
+  letter-spacing:6px;
+  background:linear-gradient(90deg,#c084fc,#f472b6,#ffd700,#f472b6,#c084fc);
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:nameShine 3s linear infinite;
+  text-shadow:none;
+  filter:drop-shadow(0 0 14px rgba(192,132,252,.5));
+}
+@keyframes nameShine{
+  0%{background-position:0% center}
+  100%{background-position:200% center}
+}
+.s1-hint { margin-top:14px; font-size:.6rem; font-weight:700; letter-spacing:5px; color:rgba(255,255,255,.2); text-transform:uppercase; display:flex; align-items:center; justify-content:center; gap:8px; }
 .bounce { animation:bx 1.2s ease-in-out infinite; }
 @keyframes bx{ 0%,100%{transform:translateX(0)} 50%{transform:translateX(7px)} }
 
@@ -147,6 +165,7 @@ html, body { width:100%; height:100%; overflow:hidden; background:#000; font-fam
         <div class="s1-big">PAPÁ<span class="g">ES...</span></div>
         <div class="s1-bar"></div>
         <div class="s1-sub">Una historia de héroes y amor</div>
+        <div class="s1-name">Carlos Alfredo Romaña Tuesta</div>
         <div class="s1-hint">Reproduciendo automáticamente <span class="bounce">→</span></div>
       </div>
     </div>
